@@ -1,12 +1,10 @@
 import { makeStyles } from '@mui/styles';
-// import { useTheme } from '@emotion/react';
 import { createTheme } from '@mui/system';
 import { alpha } from '@mui/material/styles';
 const theme = createTheme({
-    spacing: 2,
+
 });
 export const useStyles = makeStyles(() => ({
-
     toolbar: {
         display: 'flex',
         justifyContent: 'space-between',
@@ -31,7 +29,7 @@ export const useStyles = makeStyles(() => ({
     search: {
         display: 'flex',
         alignItems: 'center',
-        backgroundColor: alpha('#C5E7E6', 0.15),
+        backgroundColor: alpha('#C5D8E7', 0.15),
         '&:hover': {
 
             // backgroundColor: alpha(theme.palette.common.white, 0.25),
@@ -62,6 +60,7 @@ export const useStyles = makeStyles(() => ({
         },
     },
     icons: {
+        alignContent: 'center',
         alignItems: 'space-between',
         padding: theme.spacing(2),
         display: (props) => (props.open ? 'none' : 'flex'),
@@ -74,6 +73,8 @@ export const useStyles = makeStyles(() => ({
         borderRadius: theme.spacing(4),
         display: 'flex',
         position: 'inherit',
-        marginTop: theme.spacing(19)
+    },
+    avatar: {
+        margin: theme.spacing(2)
     }
 }));
