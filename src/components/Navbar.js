@@ -43,9 +43,9 @@ const Navbar = () => {
     ];
     return (
 
-        <div>
+        <div className={classes.bar}>
 
-            <AppBar style={{ position: 'fixed', left: 0, top: 0, right: 0 }}>
+            <AppBar style={{ position: 'static', }}>
                 <Toolbar className={classes.toolbar}>
                     <Typography variant="h6" className={classes.logoLg}>
                         MUI React
@@ -105,10 +105,7 @@ const Navbar = () => {
                     </div>
                 </Toolbar>
             </AppBar>
-            <div className={classes.bar}>
 
-
-            </div>
         </div>
     );
 };
