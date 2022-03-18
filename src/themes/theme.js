@@ -1,5 +1,6 @@
 
 import { createTheme } from '@mui/system';
+// define custom color palette  using createTheme
 export const theme = createTheme({
     palette: {
         primary: {

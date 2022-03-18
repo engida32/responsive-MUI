@@ -17,7 +17,7 @@ import ListItemText from '@mui/material/ListItemText';
 import { ListItem } from '@mui/material';
 import { List } from '@mui/material';
 import ListItemIcon from '@mui/material/ListItemIcon';
-import { useStyles } from '../style/styles';
+import { useStyles } from './styles';
 // import { useTheme } from '@emotion/react';
 
 
@@ -45,7 +45,7 @@ const Navbar = () => {
 
         <div className={classes.bar}>
 
-            <AppBar style={{ position: 'static', }}>
+            <AppBar style={{ position: 'static' }}>
                 <Toolbar className={classes.toolbar}>
                     <Typography variant="h6" className={classes.logoLg}>
                         MUI React

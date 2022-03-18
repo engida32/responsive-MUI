@@ -9,7 +9,7 @@ export const useStyles = makeStyles(() => ({
         display: 'flex',
         justifyContent: 'space-between',
         marginRight: theme.spacing(12),
-
+        height: 21
     },
     logoLg: {
         display: 'none',

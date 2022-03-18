@@ -15,10 +15,20 @@ const useStyles = makeStyles(() => ({
     fontSize: 16,
     fontWeight: 500,
     color: '#555',
+
   },
   link: {
     marginRight: themes.spacing(6)
     , color: '#555',
+  },
+  avatar:{
+
+    position: 'relative',
+    marginRight: themes.spacing(25),
+    margin: themes.spacing(3)
+
+
+
   }
 }));
 const Rightbar = () => {
@@ -29,7 +39,7 @@ const Rightbar = () => {
         Online friends
       </Typography>
 
-      <AvatarGroup max={6} style={{ marginBottom: 20, marginLeft: 0 }}>
+      <AvatarGroup max={6} style={{ marginBottom: 20, marginLeft: 0 }} className={classes.avatar}>
         <Avatar
           alt="Remy Sharp"
           src="https://material-ui.com/static/images/avatar/1.jpg"

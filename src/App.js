@@ -1,12 +1,12 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { Grid } from '@mui/material';
 import Feed from './components/feed/Feed';
-import Leftbar from './components/Leftbar';
-import Navbar from './components/Navbar';
-import Rightbar from './components/Rightbar';
+import Leftbar from './components/leftbar/Leftbar';
+import Navbar from './components/navbar/Navbar';
+import Rightbar from './components/rightbar/Rightbar';
 import { makeStyles } from '@mui/styles';
 import { createTheme } from '@mui/system';
-import Add from './components/Add';
+import Add from './components/modal/Add';
 
 const themes = createTheme();
 const useStyles = makeStyles(() => ({
