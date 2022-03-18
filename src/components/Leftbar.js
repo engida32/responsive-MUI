@@ -1,97 +1,133 @@
-import { Bookmark, ExitToApp, Home, List, Person, PhotoCamera, PlayCircleOutline, Settings, Storefront, TabletMac } from '@mui/icons-material';
-import { Container, Typography } from '@mui/material';
-import { makeStyles } from '@mui/styles';
-import React from 'react';
-import { createTheme } from '@mui/system';
-import { theme } from '../themes/theme';
-const themes = createTheme();
-const useStyles = makeStyles(() => ({
+/* eslint-disable react/react-in-jsx-scope */
+import {
+  Link,
+  Avatar,
+  Container,
+  ImageList,
+  ImageListItem,
+  makeStyles,
+  Typography,
+  Divider,
+} from '@mui/material';
+import { AvatarGroup } from '@mui/material';
+
+const useStyles = makeStyles((theme) => ({
   container: {
-    height: '100vh',
-    paddingTop: themes.spacing(2),
-    color: 'white',
+    paddingTop: theme.spacing(10),
     position: 'sticky',
     top: 0,
-    backgroundColor: theme.palette.primary.main,
-    [themes.breakpoints.up('sm')]: {
-      backgroundColor: 'white',
-      color: '#5555',
-      border: '1px solid #eca',
-    }
   },
-  icon: {
-    marginRight: themes.spacing(1),
-    [themes.breakpoints.down('sm')]: {
-      display: 'flex',
-      color: 'white'
-
-    }
-  },
-  item: {
-    color: '#555 ',
-    display: 'flex',
-    alignItems: 'center',
-    marginBottom: themes.spacing(4),
-    [themes.breakpoints.up('sm')]: {
-      marginBottom: themes.spacing(3),
-      cursor: 'pointer'
-    }
-  },
-  text: {
-    fontSize: '18px',
+  title: {
+    fontSize: 16,
     fontWeight: 500,
-    [themes.breakpoints.down('sm')]: {
-      display: 'none',
-      cursor: 'pointer',
-    },
-  }
-}
-));
-const Leftbar = () => {
+    color: '#555',
+  },
+  link: {
+    marginRight: theme.spacing(2),
+    color: '#555',
+    fontSize: 16,
+  },
+}));
+
+const Rightbar = () => {
   const classes = useStyles();
   return (
-    <Container className={classes.container} >
-      <div className={classes.item}>
-        <Home className={classes.icon} />
-        <Typography className={classes.text}> Homepage</Typography>
-      </div>
-      <div className={classes.item}>
-        <Person className={classes.icon} />
-        <Typography className={classes.text}> Friends</Typography>
-      </div>
-      <div className={classes.item}>
-        <List className={classes.icon} />
-        <Typography className={classes.text}> List</Typography>
-      </div>
-      <div className={classes.item}>
-        <PhotoCamera className={classes.icon} />
-        <Typography className={classes.text}> Camera</Typography>
-      </div><div className={classes.item}>
-        <PlayCircleOutline className={classes.icon} />
-        <Typography className={classes.text}> Videos</Typography>
-      </div>
-      <div className={classes.item}>
-        <TabletMac className={classes.icon} />
-        <Typography className={classes.text}> Apps</Typography>
-      </div><div className={classes.item}>
-        <Bookmark className={classes.icon} />
-        <Typography className={classes.text}> Bookmark</Typography>
-      </div><div className={classes.item}>
-        <Storefront className={classes.icon} />
-        <Typography className={classes.text}> Market Place</Typography>
-      </div>
-      <div className={classes.item}>
-        <Settings className={classes.icon} />
-        <Typography className={classes.text}> Settings</Typography>
-      </div>
-      <div className={classes.item}>
-        <ExitToApp className={classes.icon} />
-        <Typography className={classes.text}> Signout</Typography>
-      </div>
-
+    <Container className={classes.container}>
+      <Typography className={classes.title} gutterBottom>
+        Online Friends
+      </Typography>
+      <AvatarGroup max={6} style={{ marginBottom: 20 }}>
+        <Avatar
+          alt="Remy Sharp"
+          src="https://material-ui.com/static/images/avatar/1.jpg"
+        />
+        <Avatar
+          alt="Travis Howard"
+          src="https://material-ui.com/static/images/avatar/2.jpg"
+        />
+        <Avatar
+          alt="Cindy Baker"
+          src="https://material-ui.com/static/images/avatar/3.jpg"
+        />
+        <Avatar alt="Agnes Walker" src="" />
+        <Avatar
+          alt="Trevor Henderson"
+          src="https://material-ui.com/static/images/avatar/6.jpg"
+        />
+        <Avatar
+          alt="Trevor Henderson"
+          src="https://material-ui.com/static/images/avatar/7.jpg"
+        />
+        <Avatar
+          alt="Trevor Henderson"
+          src="https://material-ui.com/static/images/avatar/8.jpg"
+        />
+      </AvatarGroup>
+      <Typography className={classes.title} gutterBottom>
+        Gallery
+      </Typography>
+      <ImageList rowHeight={100} style={{ marginBottom: 20 }} cols={2}>
+        <ImageListItem>
+          <img
+            src="https://material-ui.com/static/images/image-list/breakfast.jpg"
+            alt=""
+          />
+        </ImageListItem>
+        <ImageListItem>
+          <img
+            src="https://material-ui.com/static/images/image-list/burgers.jpg"
+            alt=""
+          />
+        </ImageListItem>
+        <ImageListItem>
+          <img
+            src="https://material-ui.com/static/images/image-list/camera.jpg"
+            alt=""
+          />
+        </ImageListItem>
+        <ImageListItem>
+          <img
+            src="https://material-ui.com/static/images/image-list/morning.jpg"
+            alt=""
+          />
+        </ImageListItem>
+        <ImageListItem>
+          <img
+            src="https://material-ui.com/static/images/image-list/hats.jpg"
+            alt=""
+          />
+        </ImageListItem>
+        <ImageListItem>
+          <img
+            src="https://material-ui.com/static/images/image-list/vegetables.jpg"
+            alt=""
+          />
+        </ImageListItem>
+      </ImageList>
+      <Typography className={classes.title} gutterBottom>
+        Categories
+      </Typography>
+      <Link href="#" className={classes.link} variant="body2">
+        Sport
+      </Link>
+      <Link href="#" className={classes.link} variant="body2">
+        Food
+      </Link>
+      <Link href="#" className={classes.link} variant="body2">
+        Music
+      </Link>
+      <Divider flexItem style={{ marginBottom: 5 }} />
+      <Link href="#" className={classes.link} variant="body2">
+        Movies
+      </Link>
+      <Link href="#" className={classes.link} variant="body2">
+        Science
+      </Link>
+      <Link href="#" className={classes.link} variant="body2">
+        Life
+      </Link>
     </Container>
-
   );
 };
 
-export default Leftbar;
+export default Rightbar;
